@@ -77,3 +77,21 @@ print(checkstring.endswith("!"))
 # Exercises follow here
 
 # Exercise 1:
+print("Animals".lower())
+print("Badger".lower())
+print("Honey Bee".lower())
+print("Honeybadger".lower())
+
+# Exercise 2:
+print("Animals".upper())
+print("Badger".upper())
+print("Honey Bee".upper())
+print("Honeybadger".upper())
+
+# Exercise 3:
+string1 = " Filet Mignon"
+string2 = "Brisket "
+string3 = " Cheeseburger "
+print(string1.lstrip())
+print(string2.rstrip())
+print(string3.strip())
