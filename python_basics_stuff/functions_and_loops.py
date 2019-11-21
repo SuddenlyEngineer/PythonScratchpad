@@ -56,5 +56,3 @@ for n in range (1,4):
 
 # SECTION 6.5 CHALLENGE
 invest(100, .05, 4)
-
-# Section 6.6
