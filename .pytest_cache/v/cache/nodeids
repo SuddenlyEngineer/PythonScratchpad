@@ -1,0 +1,6 @@
+[
+  "PyBites/test_slicing.py::test_slice_and_dice_default_text",
+  "PyBites/test_slicing.py::test_slice_and_dice_other_text",
+  "PyBites/test_vowels.py::test_strip_vowels_on_zen",
+  "PyBites/test_vowels.py::test_strip_vowels_on_other_text"
+]
