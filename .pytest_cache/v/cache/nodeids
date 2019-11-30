@@ -1,11 +1,11 @@
 [
-  "PyBites/test_belts.py::test_get_total_points_given_belts",
-  "PyBites/test_belts.py::test_get_total_points_more_belts",
   "PyBites/test_list_comprehension.py::test_filter_positive_and_negatives",
   "PyBites/test_list_comprehension.py::test_only_positives",
   "PyBites/test_list_comprehension.py::test_filter_zero_and_negatives",
   "PyBites/test_slicing.py::test_slice_and_dice_default_text",
   "PyBites/test_slicing.py::test_slice_and_dice_other_text",
   "PyBites/test_vowels.py::test_strip_vowels_on_zen",
-  "PyBites/test_vowels.py::test_strip_vowels_on_other_text"
+  "PyBites/test_vowels.py::test_strip_vowels_on_other_text",
+  "PyBites/test_belts.py::test_get_total_points_given_belts",
+  "PyBites/test_belts.py::test_get_total_points_more_belts"
 ]
