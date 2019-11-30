@@ -3,6 +3,6 @@ def filter_positive_even_numbers(numbers):
        numbers that are both positive and even (divisible by 2), try to use a
        list comprehension."""
 
-       
-    pass
-
+    new_list = [x for x in numbers if x % 2 == 0]
+    return_list = [x for x in new_list if x > 0]
+    return return_list

@@ -1,6 +1,5 @@
 from list_comprehensions import filter_positive_even_numbers
 
-
 def test_filter_positive_and_negatives():
     numbers = list(range(-10, 11))
     assert filter_positive_even_numbers(numbers) == [2, 4, 6, 8, 10]
