@@ -11,30 +11,32 @@ class Deck:
     def __init__(self):
         allowed_suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
         allowed_values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
-        self.deck_list = [Card(suits, value) for suits in allowed_suits for value in allowed_values]
+        self.cards = [Card(suits, value) for suits in allowed_suits for value in allowed_values]
     
     def __repr__(self):
-        return len(Deck.deck_list)
+        return "Deck of {} cards".format(len(self.cards))
+        
+    def count(self):
+        return len(self.cards)
                 
-    def _deal(self, number):
-        removed_cards = []
-        if len(Deck.deck_list) == 0:
+    def _deal(self, num):
+        to_remove = min([int(num), self.count()])
+        if self.count() == 0:
             raise ValueError("No more cards left in the deck!")
-        if number > len(Deck.deck_list):
-            number = len(Deck.deck_list)
-        for num in range(number):
-            removed_card = Deck.deck_list.pop()
-            removed_cards.append(removed_card)
+        removed_cards = self.cards[-to_remove:]
+        self.cards = self.cards[:-to_remove]
         return removed_cards
         
     def shuffle(self):
-        if len(Deck.deck_list) != 52:
-            raise TypeError("Only full decks can be shuffled")
-        random.shuffle(Deck.deck_list)
+        if self.count() == 52:
+            random.shuffle(self.cards)
+        else:
+            raise ValueError("Only full decks can be shuffled")
+            print(self.count())
         
     def deal_card(self):
-        cards = Deck._deal(1)
+        cards = self._deal(1)
         return cards[0]
-    def deal_hand(self, number):
-        cards = Deck._deal(number)
+    def deal_hand(self, num):
+        cards = self._deal(num)
         return cards
