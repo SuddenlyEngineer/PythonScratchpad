@@ -8,35 +8,27 @@ class Card:
         return "{} of {}".format(self.value, self.suit)
 
 class Deck:
-    count = 0
-    allowed_suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
-    allowed_values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
-    deck_list = []
     def __init__(self):
-        Deck.count = 52
-        for suits in Deck.allowed_suits:
-            for values in Deck.allowed_values:
-                Card(suits, values)
-                Deck.count += 1
-                deck_list.append(Card) #Note: this list will appear in order. 
+        allowed_suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
+        allowed_values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+        self.deck_list = [Card(suits, value) for suits in allowed_suits for value in allowed_values]
     
     def __repr__(self):
-        return Deck.count
+        return len(Deck.deck_list)
                 
     def _deal(self, number):
         removed_cards = []
-        if Deck.count == 0:
+        if len(Deck.deck_list) == 0:
             raise ValueError("No more cards left in the deck!")
-        if number > Deck.count:
-            number = Deck.count
+        if number > len(Deck.deck_list):
+            number = len(Deck.deck_list)
         for num in range(number):
             removed_card = Deck.deck_list.pop()
             removed_cards.append(removed_card)
-        Deck.count -= number
         return removed_cards
         
     def shuffle(self):
-        if Deck.count != 52:
+        if len(Deck.deck_list) != 52:
             raise TypeError("Only full decks can be shuffled")
         random.shuffle(Deck.deck_list)
         
