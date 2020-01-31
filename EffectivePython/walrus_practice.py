@@ -1,0 +1,4 @@
+fresh_fruit = {
+    'lemon'
+    ''
+}
