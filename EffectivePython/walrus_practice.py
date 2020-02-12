@@ -1,4 +1,0 @@
-fresh_fruit = {
-    'lemon'
-    ''
-}
