@@ -2,7 +2,7 @@
     "python.testing.pytestArgs": [
         "PyBites"
     ],
-    "python.testing.unittestEnabled": true,
+    "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": false,
     "python.pythonPath": "/Users/thomas/.pyenv/shims/python",
@@ -12,5 +12,6 @@
         "./Udemy",
         "-p",
         "*_test.py"
-    ]
+    ],
+    "python.testing.promptToConfigure": false
 }
